@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cinthya Nascimento Advocacia — Defesa jurídica multidisciplinar de altíssimo padrão. Atuação estratégica nacional cível, de família, criminal, trabalhista, previdenciária e penal militar. Sede em Belém/PA.">
-  <meta property="og:title" content="Cinthya Nascimento Advocacia | Escritório de Advocacia Premium">
-  <meta property="og:description" content="A defesa estratégica dos seus direitos com atuação em todo o território nacional.">
+  <meta name="description" content="Cinthya Nascimento Advocacia — Orientação e defesa jurídica especializada e próxima. Atendimento nas áreas Civil, Família, Criminal, Trabalhista, Previdenciário e Penal Militar em Belém/PA e ambiente digital.">
+  <meta property="og:title" content="Cinthya Nascimento Advocacia | Orientação e Defesa Jurídica">
+  <meta property="og:description" content="Apoio jurídico especializado para proteger o que é mais importante para você, com atendimento próximo e ético.">
   <meta property="og:image" content="./logo.jpg">
   <meta name="theme-color" content="#0d0d0f">
   
@@ -1593,6 +1593,166 @@
         padding: var(--space-section-desktop) 0;
       }
     }
+
+    /* ── CTA INTERMEDIÁRIO (BANNER ACOLHEDOR) ────────────────── */
+    .cta-intermediario {
+      background-color: var(--color-surface-card);
+      border-top: 1px solid rgba(179, 153, 122, 0.1);
+      border-bottom: 1px solid rgba(179, 153, 122, 0.1);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 60px 0;
+    }
+    
+    .cta-intermediario::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at center, rgba(179, 153, 122, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-intermediario__inner {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .cta-intermediario__title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--color-text-main);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .cta-intermediario__title span {
+      color: var(--color-accent);
+      font-weight: 900;
+    }
+
+    .cta-intermediario__sub {
+      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+      font-weight: 300;
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .btn-cta-intermediario {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: var(--color-accent);
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 12px 28px;
+      border-radius: 100px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(179, 153, 122, 0.2);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-cta-intermediario:hover {
+      background-color: var(--color-text-main);
+      color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(243, 243, 245, 0.2);
+    }
+
+    /* ── SEÇÃO COMO FUNCIONA O ATENDIMENTO ───────────────────── */
+    .como-funciona {
+      background-color: var(--color-primary);
+      position: relative;
+    }
+
+    .como-funciona__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background-color: var(--color-surface);
+      border: 1px solid rgba(179, 153, 122, 0.08);
+      border-radius: var(--border-radius-card);
+      padding: 36px 28px;
+      position: relative;
+      transition: var(--transition-smooth);
+      text-align: left;
+    }
+
+    .step-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: var(--color-accent);
+      transition: var(--transition-smooth);
+    }
+
+    .step-card__number {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgba(179, 153, 122, 0.2);
+      border-radius: 50%;
+    }
+
+    .step-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      margin-bottom: 12px;
+    }
+
+    .step-card__desc {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--color-text-muted);
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(179, 153, 122, 0.25);
+      box-shadow: 0 10px 25px rgba(179, 153, 122, 0.05);
+    }
+
+    .step-card:hover::before {
+      width: 4px;
+    }
+
+    .step-card:hover .step-card__number {
+      background-color: var(--color-accent);
+      color: var(--color-primary);
+      border-color: var(--color-accent);
+      box-shadow: 0 0 12px rgba(179, 153, 122, 0.3);
+    }
+
+    @media (min-width: 768px) {
+      .como-funciona__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   </style>
 </head>
 <body class="mineral-texture">
@@ -1610,8 +1770,8 @@
         </a>
         
         <nav class="header__nav" aria-label="Navegação Principal">
-          <a href="#sobre" class="header__nav-link">Sobre</a>
           <a href="#servicos" class="header__nav-link">Serviços</a>
+          <a href="#sobre" class="header__nav-link">Sobre</a>
           <a href="#resultados" class="header__nav-link">Resultados</a>
           <a href="#depoimentos" class="header__nav-link">Depoimentos</a>
           <a href="#contato" class="header__nav-link">Contato</a>
@@ -1637,8 +1797,8 @@
   <!-- ── MENU MÓVEL OVERLAY ────────────────────────────────── -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu móvel completo">
     <nav class="mobile-menu__nav" aria-label="Links móveis">
-      <a href="#sobre" class="mobile-menu__link">Sobre</a>
       <a href="#servicos" class="mobile-menu__link">Serviços</a>
+      <a href="#sobre" class="mobile-menu__link">Sobre</a>
       <a href="#resultados" class="mobile-menu__link">Resultados</a>
       <a href="#depoimentos" class="mobile-menu__link">Depoimentos</a>
       <a href="#contato" class="mobile-menu__link">Contato</a>
@@ -1657,23 +1817,23 @@
     <div class="container">
       <div class="hero__inner">
         <div class="hero__content">
-          <span class="section-tag reveal">Advocacia Multidisciplinar Premium</span>
+          <span class="section-tag reveal">Orientação e Defesa Jurídica</span>
           <div class="hero__title-container reveal">
             <div class="hero__signature-line"></div>
             <h1 class="hero__title">
-              Defesa técnica de <span>excelência</span> e compromisso com a sua <span>tranquilidade</span>.
+              Apoio jurídico <span>especializado</span> para proteger o que é mais <span>importante</span> para você
             </h1>
           </div>
           <p class="hero__sub reveal">
-            A defesa estratégica dos seus direitos com atuação resolutiva em todo o território nacional, a partir de sede executiva em Belém/PA.
+            Defesa técnica e atendimento próximo nas áreas Civil, de Família, Criminal, Trabalhista, Previdenciária e Penal Militar. Atendimento em Belém/PA e consultas online para todo o país.
           </p>
           <div class="hero__actions reveal">
             <a href="https://wa.me/5591998401830?text=Ol%C3%A1%20Dra.%20Cinthya%20Nascimento,%20estou%20diante%20de%20um%20caso%20jur%C3%ADdico%20e%20gostaria%20de%20uma%20defesa%20estrat%C3%A9gica." 
                target="_blank" 
                rel="noopener noreferrer" 
                class="btn-hero-primary"
-               aria-label="Solicitar defesa estratégica via WhatsApp">
-              <i class="fab fa-whatsapp"></i> Iniciar Atendimento
+               aria-label="Falar com Advogada no WhatsApp">
+              <i class="fab fa-whatsapp"></i> Falar com Advogada
             </a>
             <a href="#servicos" class="btn-hero-secondary" aria-label="Rolar para os serviços oferecidos">
               Conhecer Atuação <i class="fas fa-arrow-right"></i>
@@ -1691,56 +1851,13 @@
     <div class="hero__watermark" aria-hidden="true">CN</div>
   </section>
 
-  <!-- ── SEÇÃO SOBRE (A PROFISSIONAL) ────────────────────────── -->
-  <section class="sobre sec-padding" id="sobre">
-    <div class="container">
-      <div class="sobre__inner">
-        <div class="sobre__photo reveal">
-          <div class="sobre__image-wrapper">
-            <img src="./cinthya-profile.jpg" alt="Dra. Cinthya Nascimento" class="sobre__img" loading="lazy">
-          </div>
-        </div>
-
-        <div class="sobre__content">
-          <span class="section-tag reveal">Sobre a Profissional</span>
-          <h2 class="section-title reveal">Dedicação Combativa e <span>Acolhimento</span> no Momento Certo</h2>
-          <p class="sobre__p reveal">
-            Sou a <span>Dra. Cinthya Nascimento (OAB/PA 38.939)</span> e acredito que a advocacia de alto padrão vai além da simples redação técnica — ela exige <strong>empatia real, sensibilidade e obstinação combativa</strong> na defesa das prerrogativas e direitos fundamentais de cada pessoa sob meu patrocínio.
-          </p>
-          <p class="sobre__p reveal">
-            Com atuação corporativa e cível consolidada a partir de Belém/PA e abrangência em <strong>todo o território nacional</strong>, o meu objetivo é tirar a complexidade técnica e o peso emocional das suas costas, operando com agilidade e clareza para que você recupere sua tranquilidade.
-          </p>
-          
-          <ul class="sobre__pilares reveal stagger-group">
-            <li class="sobre__pilar">
-              <i class="fas fa-check" aria-hidden="true"></i>
-              <span><strong>Ética e Rigor Científico:</strong> Condução técnica baseada em jurisprudência robusta com sigilo processual inviolável.</span>
-            </li>
-            <li class="sobre__pilar">
-              <i class="fas fa-check" aria-hidden="true"></i>
-              <span><strong>Atendimento 24h Digital:</strong> Presença assertiva e suporte dinâmico no meio eletrônico onde quer que você esteja.</span>
-            </li>
-            <li class="sobre__pilar">
-              <i class="fas fa-check" aria-hidden="true"></i>
-              <span><strong>Transparência Total:</strong> Relatórios jurídicos claros, sem termos herméticos, garantindo que você compreenda cada etapa.</span>
-            </li>
-            <li class="sobre__pilar">
-              <i class="fas fa-check" aria-hidden="true"></i>
-              <span><strong>Atuação Combativa:</strong> Dedicação incansável voltada a resoluções contundentes na esfera administrativa ou contenciosa.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ── SEÇÃO SERVIÇOS (ARQUITETURA MULTIDISCIPLINAR) ──────── -->
   <section class="servicos sec-padding" id="servicos">
     <div class="container">
-      <span class="section-tag reveal">Especialidades</span>
-      <h2 class="section-title reveal">Arquitetura Multidisciplinar de <span>Luxo</span></h2>
+      <span class="section-tag reveal">Como posso ajudar</span>
+      <h2 class="section-title reveal">Áreas de Atuação e <span>Soluções Jurídicas</span></h2>
       <p class="section-desc reveal">
-        Soluções de alta sofisticação técnica para blindagem patrimonial, liberdade civil e resguardo constitucional, sem formatos genéricos.
+        Atendimento dedicado, ético e focado em orientar e defender você em questões familiares, civis, trabalhistas, previdenciárias e criminais.
       </p>
 
       <div class="servicos__list stagger-group">
@@ -1754,7 +1871,7 @@
               <h3 class="service-row__title">Direito Civil e Contratos</h3>
             </div>
             <p class="service-row__desc">
-              Soluções patrimoniais preventivas, estruturação de obrigações civis, negociações contratuais complexas e confecção de contratos sob medida para máxima segurança de negócios físicos ou digitais.
+              Elaboração e análise segura de contratos, defesa de direitos patrimoniais e assessoria preventiva para garantir que seus acordos e negócios tenham total segurança jurídica.
             </p>
           </div>
           <div class="service-row__action">
@@ -1771,7 +1888,7 @@
               <h3 class="service-row__title">Direito de Família e Sucessões</h3>
             </div>
             <p class="service-row__desc">
-              Inventários judiciais e extrajudiciais ágeis, divórcios, partilhas estratégicas de patrimônio e acordos de pensão alimentícia. Atuação com discrição cirúrgica, absoluto sigilo e sensibilidade.
+              Orientação sensível e técnica em divórcios, partilha de bens, inventários, guarda de filhos e pensão alimentícia, priorizando o acolhimento e a proteção de seus interesses.
             </p>
           </div>
           <div class="service-row__action">
@@ -1788,7 +1905,7 @@
               <h3 class="service-row__title">Direito Criminal e Penal</h3>
             </div>
             <p class="service-row__desc">
-              Defesa criminal técnica intransigente em todas as fases da persecução penal. Forte atuação perante inquéritos policiais, flagrantes urgentes, audiências de custódia e habeas corpus.
+              Defesa técnica e atuação ágil perante órgãos policiais e judiciais. Acompanhamento próximo em flagrantes, inquéritos, audiências e medidas de urgência para resguardar seus direitos constitucionais.
             </p>
           </div>
           <div class="service-row__action">
@@ -1805,7 +1922,7 @@
               <h3 class="service-row__title">Direito do Trabalho</h3>
             </div>
             <p class="service-row__desc">
-              Assessoria jurídica preventiva de conformidade trabalhista corporativa para mitigar riscos, além de patrocínio combativo em reclamações trabalhistas contenciosas de alta complexidade.
+              Defesa de direitos trabalhistas, reversão de demissões injustas, cobrança de verbas devidas e assessoria preventiva para empresas evitarem passivos jurídicos.
             </p>
           </div>
           <div class="service-row__action">
@@ -1822,7 +1939,7 @@
               <h3 class="service-row__title">Direito Previdenciário</h3>
             </div>
             <p class="service-row__desc">
-              Planejamento previdenciário preventivo minucioso para maximizar sua futura aposentadoria. Obtenção ágil de benefícios e recursos cirúrgicos contra negativas indevidas do INSS.
+              Planejamento detalhado para sua aposentadoria e atuação focada para obter benefícios (como pensão por morte ou auxílio-doença) negados injustamente pelo INSS.
             </p>
           </div>
           <div class="service-row__action">
@@ -1839,7 +1956,7 @@
               <h3 class="service-row__title">Direito Penal Militar</h3>
             </div>
             <p class="service-row__desc">
-              Atuação especializada voltada a militares perante a Justiça Militar Estadual e Federal, cobrindo inquéritos policiais militares (IPM), sindicâncias administrativas e processos criminais militares.
+              Defesa técnica e assessoria especializada voltada a militares em inquéritos policiais militares (IPM), sindicâncias administrativas e processos na Justiça Militar.
             </p>
           </div>
           <div class="service-row__action">
@@ -1851,6 +1968,110 @@
     </div>
   </section>
 
+  <!-- ── SEÇÃO SOBRE (A PROFISSIONAL) ────────────────────────── -->
+  <section class="sobre sec-padding" id="sobre">
+    <div class="container">
+      <div class="sobre__inner">
+        <div class="sobre__photo reveal">
+          <div class="sobre__image-wrapper">
+            <img src="./cinthya-profile.jpg" alt="Dra. Cinthya Nascimento" class="sobre__img" loading="lazy">
+          </div>
+        </div>
+
+        <div class="sobre__content">
+          <span class="section-tag reveal">Quem representa você</span>
+          <h2 class="section-title reveal">Dedicação técnica, ética e compromisso com o seu <span>caso</span></h2>
+          <p class="sobre__p reveal">
+            Acredito que uma advocacia de qualidade exige muito mais do que conhecimento técnico da lei. Exige <strong>empatia para ouvir, sensibilidade para entender a sua situação e firmeza técnica para defender os seus interesses</strong>.
+          </p>
+          <p class="sobre__p reveal">
+            Sou a <span>Dra. Cinthya Nascimento (OAB/PA 38.939)</span>. O meu compromisso é prestar uma orientação jurídica transparente e acessível, tirando o peso da burocracia das suas costas para que você possa focar no que realmente importa: a sua paz de espírito.
+          </p>
+          
+          <ul class="sobre__pilares reveal stagger-group">
+            <li class="sobre__pilar">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              <span><strong>Ética e Rigor Técnico:</strong> Atuação pautada rigorosamente nas leis e no código de ética, com sigilo absoluto sobre todas as suas informações.</span>
+            </li>
+            <li class="sobre__pilar">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              <span><strong>Atendimento Próximo e Digital:</strong> Suporte ágil por canais eletrônicos ou reuniões presenciais em Belém/PA, garantindo respostas rápidas quando você precisa.</span>
+            </li>
+            <li class="sobre__pilar">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              <span><strong>Transparência e Clareza:</strong> Explicações simples sobre o andamento do seu processo, sem jargões jurídicos confusos ou termos complicados.</span>
+            </li>
+            <li class="sobre__pilar">
+              <i class="fas fa-check" aria-hidden="true"></i>
+              <span><strong>Acompanhamento Dedicado:</strong> Dedicação integral a cada caso, buscando a solução jurídica mais segura, seja ela consensual ou judicial.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA INTERMEDIÁRIO (BANNER ACOLHEDOR) ────────────────── -->
+  <section class="cta-intermediario reveal">
+    <div class="container">
+      <div class="cta-intermediario__inner">
+        <h2 class="cta-intermediario__title">Precisa de uma orientação para o seu <span>caso</span>?</h2>
+        <p class="cta-intermediario__sub">
+          Fale diretamente com a Dra. Cinthya Nascimento pelo WhatsApp. Vamos conversar sobre o seu problema jurídico de forma segura, com total sigilo e discrição.
+        </p>
+        <a href="https://wa.me/5591998401830?text=Ol%C3%A1%20Dra.%20Cinthya%20Nascimento,%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sigilosa%20para%20o%20meu%20caso." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-cta-intermediario"
+           aria-label="Falar com Dra. Cinthya pelo WhatsApp">
+          <i class="fab fa-whatsapp"></i> Iniciar Conversa Sigilosa
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SEÇÃO COMO FUNCIONA O ATENDIMENTO ───────────────────── -->
+  <section class="como-funciona sec-padding" id="como-funciona">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-tag reveal" style="justify-content: center; margin-left: auto; margin-right: auto; padding-left: 16px;">Transparência</span>
+        <h2 class="section-title reveal">Como funciona o nosso <span>atendimento</span></h2>
+        <p class="section-desc reveal" style="margin-left: auto; margin-right: auto;">
+          Processo simples e seguro para você receber orientação jurídica sem burocracia.
+        </p>
+      </div>
+
+      <div class="como-funciona__grid stagger-group">
+        <!-- Passo 1 -->
+        <div class="step-card reveal">
+          <div class="step-card__number">1</div>
+          <h3 class="step-card__title">Primeiro Contato</h3>
+          <p class="step-card__desc">
+            Você envia uma mensagem no WhatsApp explicando brevemente qual é a sua dúvida ou problema jurídico.
+          </p>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="step-card reveal">
+          <div class="step-card__number">2</div>
+          <h3 class="step-card__title">Análise Técnica</h3>
+          <p class="step-card__desc">
+            Avaliamos os detalhes, documentos e as leis aplicáveis para encontrar o caminho jurídico mais seguro para você.
+          </p>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="step-card reveal">
+          <div class="step-card__number">3</div>
+          <h3 class="step-card__title">Orientação Direta</h3>
+          <p class="step-card__desc">
+            Apresentamos as soluções possíveis de forma clara, tiramos suas dúvidas e damos início à defesa dos seus direitos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── NÚMEROS E DIFERENCIAIS (MÉTRICAS JS) ────────────────── -->
   <section class="metrics sec-padding" id="resultados">
     <div class="container">
@@ -1858,20 +2079,20 @@
         
         <div class="metric-item reveal">
           <div class="metric-item__num" id="count-anos"><span class="counter" data-target="3">0</span><span>+</span></div>
-          <h3 class="metric-item__label">Anos de Atuação</h3>
-          <p class="metric-item__desc">Dedicação incansável e rigor metodológico contínuo em todo o Brasil.</p>
+          <h3 class="metric-item__label">Anos de Experiência</h3>
+          <p class="metric-item__desc">Dedicação diária e atuação ética focada na resolução segura de conflitos.</p>
         </div>
 
         <div class="metric-item reveal">
           <div class="metric-item__num" id="count-clientes"><span class="counter" data-target="300">0</span><span>+</span></div>
-          <h3 class="metric-item__label">Clientes Defendidos</h3>
-          <p class="metric-item__desc">Proteção técnica corporativa e individual com escuta humanizada.</p>
+          <h3 class="metric-item__label">Clientes Atendidos</h3>
+          <p class="metric-item__desc">Casos individuais e empresariais acompanhados com atenção e cuidado.</p>
         </div>
 
         <div class="metric-item reveal">
           <div class="metric-item__num" id="count-compromisso"><span class="counter" data-target="100">0</span><span>%</span></div>
-          <h3 class="metric-item__label">Sigilo Profissional</h3>
-          <p class="metric-item__desc">Compromisso irrevogável com a integridade das informações de cada caso.</p>
+          <h3 class="metric-item__label">Compromisso com o Sigilo</h3>
+          <p class="metric-item__desc">Confidencialidade absoluta sobre todas as informações e dados compartilhados.</p>
         </div>
 
       </div>
@@ -1894,11 +2115,11 @@
             <div class="depo-card">
               <div class="depo-card__quote-bg">“</div>
               <p class="depo-card__text">
-                "A Dra. Cinthya demonstrou extrema competência ao analisar nosso caso de forma ampla e estratégica. A segurança jurídica e a clareza técnica que ela trouxe foram fundamentais para a proteção do meu negócio."
+                "A Dra. Cinthya foi extremamente atenciosa ao analisar meu contrato. Ela explicou todos os riscos de forma muito simples e direta, me dando total segurança para fechar o negócio."
               </p>
               <div class="depo-card__divider"></div>
-              <h4 class="depo-card__name">Marcos S.</h4>
-              <p class="depo-card__role">Empresário — Belém/PA</p>
+              <h4 class="depo-card__name">M. S.</h4>
+              <p class="depo-card__role">Belém/PA</p>
             </div>
           </div>
 
@@ -1907,11 +2128,11 @@
             <div class="depo-card">
               <div class="depo-card__quote-bg">“</div>
               <p class="depo-card__text">
-                "O que mais me chamou atenção foi o atendimento humanizado. Em um momento de extrema angústia pessoal, a Dra. Cinthya me ouviu, explicou cada etapa do processo e atuou de forma incansável até a solução do caso."
+                "Em um momento muito difícil para mim e para minha família, encontrei nela um atendimento sensível e acolhedor. Ela me ouviu com calma, explicou os passos do divórcio e agiu com muita firmeza técnica."
               </p>
               <div class="depo-card__divider"></div>
-              <h4 class="depo-card__name">Amanda R.</h4>
-              <p class="depo-card__role">Servidora Pública — São Paulo/SP</p>
+              <h4 class="depo-card__name">A. R.</h4>
+              <p class="depo-card__role">Servidora Pública</p>
             </div>
           </div>
 
@@ -1920,11 +2141,11 @@
             <div class="depo-card">
               <div class="depo-card__quote-bg">“</div>
               <p class="depo-card__text">
-                "Precisei de defesa técnica especializada e encontrei no escritório da Dra. Cinthya a agilidade e a firmeza profissional que o caso exigia. Altamente recomendada."
+                "Precisei de uma defesa rápida em uma sindicância. A atuação da Dra. Cinthya foi muito ética, ágil e transparente. Recomendo pelo profissionalismo."
               </p>
               <div class="depo-card__divider"></div>
-              <h4 class="depo-card__name">Roberto F.</h4>
-              <p class="depo-card__role">Militar da Reserva — Manaus/AM</p>
+              <h4 class="depo-card__name">R. F.</h4>
+              <p class="depo-card__role">Militar</p>
             </div>
           </div>
 
@@ -1952,18 +2173,18 @@
   <section class="cta-final sec-padding" id="contato">
     <div class="container">
       <div class="cta-final__inner">
-        <span class="section-tag reveal" style="justify-content: center; margin-left: auto; margin-right: auto; padding-left: 16px;">Contato Direto</span>
-        <h2 class="cta-final__title">Proteja seus direitos com uma defesa jurídica <span>especializada</span>.</h2>
+        <span class="section-tag reveal" style="justify-content: center; margin-left: auto; margin-right: auto; padding-left: 16px;">Fale Conosco</span>
+        <h2 class="cta-final__title">Quer entender melhor a sua <span>situação jurídica</span>?</h2>
         <p class="cta-final__sub">
-          Clique abaixo para falar diretamente com a Dra. Cinthya Nascimento via WhatsApp, expor o seu caso e receber orientação estratégica sob medida.
+          Clique no botão abaixo para conversar diretamente com a Dra. Cinthya Nascimento pelo WhatsApp. Vamos avaliar o seu problema de forma ágil, segura e totalmente confidencial.
         </p>
         <div class="reveal">
           <a href="https://wa.me/5591998401830?text=Ol%C3%A1%20Dra.%20Cinthya%20Nascimento,%20gostaria%20de%20apresentar%20meu%20caso%20para%20uma%20avalia%C3%A7%C3%A3o%20jur%C3%ADdica." 
              target="_blank" 
              rel="noopener noreferrer" 
              class="btn-cta-monumental"
-             aria-label="Entrar em contato imediatamente pelo WhatsApp">
-            <i class="fab fa-whatsapp"></i> Falar com a Dra. Cinthya
+             aria-label="Iniciar Atendimento Sigiloso pelo WhatsApp">
+            <i class="fab fa-whatsapp"></i> Iniciar Atendimento Sigiloso
           </a>
         </div>
       </div>
@@ -1985,7 +2206,7 @@
             </div>
           </div>
           <p class="footer__desc">
-            Atuação combativa de alta performance técnica. Foco na transparência e no acolhimento sob o registro OAB/PA 38.939.
+            Orientação e defesa jurídica pautada na ética, transparência e acolhimento técnico. Registro Profissional OAB/PA 38.939.
           </p>
           <div class="footer__socials">
             <a href="https://www.instagram.com/cnadvocacia__/" 
